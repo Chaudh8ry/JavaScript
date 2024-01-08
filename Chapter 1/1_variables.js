@@ -3,7 +3,7 @@
 // now "let" is used to declare variables in Js earlier "var" was used
 console.log("Hola Amigo, Mucho Gusto");
 
-// Here 'a' is "Identifier" - Name given to a variable
+//Below Here 'a' is "Identifier" - Name given to a variable
 // '8' is the "Literal" - Actual value stored in a variable
 // combination of Identifier and Literal is Variable
 // *  Identifiers are for naming and distinction, while variables are for storing and manipulating values

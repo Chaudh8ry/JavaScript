@@ -21,7 +21,7 @@ console.log("a % b =",a%b); // remainder = 1
 
 
 // Increment operator
-console.log("a++ =",a++); // output will be '45', pehle value upadte hogi fir next line mai show hogi
+console.log("a++ =",a++); // output will be '45', pehle value print hogi fir next line mai update hogi
 console.log(a); //output will be '46'
 
 console.log("++a =",++a); // value saath saath update hoke print hojayegi

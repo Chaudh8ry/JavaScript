@@ -11,3 +11,6 @@ if(a>0){
 else{
     alert("Invalid Age");
 }
+
+// Ternary Operator
+console.log("You ", a<18? "cant Drive" : "Drive");

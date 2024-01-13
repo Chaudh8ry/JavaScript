@@ -41,7 +41,6 @@ let f = Symbol("I am a nice symbol");
 */
 let g = undefined;
 
-
 //---------------characteristics---------------
 /*
 -->Immutable: Their values cannot be changed directly. To modify a primitive value, you need to create a new one.
@@ -50,9 +49,7 @@ let g = undefined;
 */
 
 /*
-The typeof operator in JavaScript is used to determine the data type of a variable or expression. It returns a string indicating the type of the operand.
-
-
+The 'typeof' operator in JavaScript is used to determine the data type of a variable or expression. It returns a string indicating the type of the operand.
 */
 
 /*

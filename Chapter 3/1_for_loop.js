@@ -8,6 +8,20 @@ for(let i=1; i<=n; i++){
 }
 console.log("Sum of " + n + " natural Number is = " + sum);
 
+// var i = 5;
+// for (var i = 0; i < 10; i++) {
+//  some code
+//}
+// Here i is '10' because "var" global scoped
+
+
+// let i = 5;
+// for (let i = 0; i < 10; i++) {
+//  some code
+// }
+// Here i is 5
+
+
 // * ----------------------Syntax---------------------------
 // for (initialization; condition; increment/decrement) {
 //      code to be repeated

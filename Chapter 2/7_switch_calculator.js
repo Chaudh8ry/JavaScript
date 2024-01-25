@@ -1,7 +1,7 @@
 // Taking Value of Operator
 const op = prompt("Enter any operator (+,-,*,/)");
-// Taking Vakue of 1st Number 
-const num1 = parseFloat(prompt("Enter 1st NUmber: ")); //since prompt will take input as 'String', parseFloat is used to convert 'String' to "Float" for calculation
+// Taking Value of 1st Number 
+const num1 = parseFloat(prompt("Enter 1st Number: ")); //since prompt will take input as 'String', parseFloat is used to convert 'String' to "Float" for calculation
 const num2 = parseFloat(prompt("Enter 2nd Number: "));
 
 switch (op) { //switch checks the value of operator

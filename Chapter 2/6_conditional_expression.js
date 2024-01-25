@@ -13,4 +13,4 @@ else{
 }
 
 // Ternary Operator
-console.log("You ", (a<18? "cant Drive" : "Drive"));
+console.log("You ", (a<18? "cant Drive" : "can Drive"));

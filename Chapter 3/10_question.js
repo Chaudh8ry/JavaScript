@@ -3,6 +3,5 @@ let a = 5;
 let i; 
 while(i!=a){
     i = parseInt(prompt("Enter a Number: "));
-    console.log("Try Again");
 }
 console.log("You have entered a Correct Number");

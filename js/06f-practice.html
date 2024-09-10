@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Toss Game</title>
+</head>
+<body>
+  <p>Choose one Outcome: </p>
+  <button onclick="
+    let guess = 'Head';
+    let result = '';
+    let randNum = Math.random();
+
+    randNum <= 0.5? result = 'Head' : result = 'Tail';
+    // if(randNum <= 0.5){
+    //   result = 'Head';
+    // }else{
+    //   result = 'Tail';
+    // }
+
+
+    let outcome = '';
+    result === guess? outcome = 'You Won' : outcome = 'You Lose';
+    // if(result === guess){
+    //     outcome = 'You Won';
+    // }else{
+    //     outcome = 'You Lose';
+    // }
+    alert(`You Choose ${guess} and System Choose ${result}. ${outcome}`)
+    ">Head</button>
+
+  <button onclick="
+  guess = 'Tail';
+  result = '';
+  randNum = Math.random();
+  
+  randNum <= 0.5? result = 'Head' : result = 'Tail';
+  // if(randNum <= 0.5){
+  //   result = 'Head';
+  // }else{
+  //   result = 'Tail'
+  // }
+
+  guess === result? outcome = 'You Won' : outcome = 'You Lose';
+  // if(guess === result){
+  //   outcome = 'You Won';
+  // }else{
+  //   outcome = 'You Lose';
+  // }
+
+  alert(`You Choose ${guess} and System Choose ${result}. ${outcome}`)
+  ">Tail</button>
+
+  <script>
+  </script>
+</body>
+</html>

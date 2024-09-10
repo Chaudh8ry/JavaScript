@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Js Practice</title>
+</head>
+<body>
+  
+  Coffee: $5 &nbsp;&nbsp;<button onclick="
+  totalCost += 5;
+  console.log(`Cart Value: $${totalCost}`);  
+  ">Add</button>
+  <button onclick="
+  console.log(`One Coffee Removed`);
+  console.log(`Cart Value: ${totalCost-=5}`);
+  ">Remove</button><br><br>
+  
+  
+  Bagels: $3 &nbsp;&nbsp;<button onclick="
+  totalCost += 3;
+  console.log(`Cart Value: $${totalCost}`);
+  ">Add</button>
+  <button onclick="
+  console.log(`One Bagel Removed`);
+  console.log(`Cart Value: ${totalCost-=3}`);
+  ">Remove</button><br><br>
+  
+  Soup: $9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="
+  totalCost += 9;
+  console.log(`Cart Value: $${totalCost}`);
+  ">Add</button>
+  <button onclick="
+  console.log(`One Soup Removed`);
+  console.log(`Cart Value: ${totalCost-=9}`);
+  ">Remove</button><br><br>
+
+  <button onclick="
+  totalCost = 0;
+  console.log(`Cart is Reset.`);
+  console.log(`Cart Value: ${totalCost}`);
+  ">Reset Cart</button>
+
+  <button onclick="
+  console.log(`Total Tax: $${(totalCost*0.1).toFixed(2)}`);
+  console.log(`Total Cost of Food: $${totalCost*0.1 + totalCost}`);
+  ">Total Price</button>
+
+  <script>
+    let totalCost = 0;
+  </script>
+</body>
+</html>

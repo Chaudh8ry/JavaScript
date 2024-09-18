@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+
+  <script>
+    const product = {
+      name: 'Smart Phone', // 'property': 'value' pair
+      price: 15000
+    };
+
+    console.log(product);
+    console.log(product.name);
+
+    product.name = 'RCB';
+    console.log(product);
+    console.log(product.name);
+
+    delete product.name;
+    console.log(product);
+
+    console.log(typeof product);
+
+    // Bracket Notation, Lets us use properties that don't work with dot notation
+    const product2 = {
+      name: 'shirt',
+      'delivery-time': '1 day',
+      // Object inside object
+      rating:{
+        stars: 4.5,
+        count: 87
+      },
+      // function inside object
+      method: function function1(){
+          console.log('function inside objects');
+      }
+    };
+
+
+    console.log(product2['delivery-time']);
+    console.log(product2.rating.count);
+    product2.method();
+
+    // here 'console' is a built-in object and 'log' is a function. 
+    console.log(typeof console.log); //function
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Json (JavaScript Object Notation)</title>
+</head>
+<body>
+  <script>
+    // A 'Json' is syntax similar to JavaScript Notation but with less features
+    // JSON syntax can be understood by any programming language, it is used when we send data between 2 computers.
+    
+    // This is Normal Js Object
+    const product2 = {
+      name: 'shirt',
+      'delivery-time': '1 day',
+      // Object inside object
+      rating:{
+        stars: 4.5,
+        count: 87
+      },
+      // function inside object
+      fun: function function1(){
+          console.log('function inside objects');
+      }
+    };
+
+
+    // converts Js object to JSON, JSON does not support functions.
+    console.log(JSON.stringify(product2)); 
+    jsonExample = JSON.stringify(product2);
+
+    console.log(JSON.parse(jsonExample)); 
+  </script>
+</body>
+</html>

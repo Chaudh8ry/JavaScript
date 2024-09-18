@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reference in Object</title>
+</head>
+<body>
+
+  <script>
+    const object1 = {
+      message: 'hello'
+    };
+
+    //copy bye reference 
+    const object2 = object1; 
+
+    object1.message = 'Good Job';
+    //changes in object1 is seen in object2 
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message: 'Good Job'
+    };
+
+    console.log(object3 === object1); //false, bcz. here we are comparing the Reference of both the objects
+    console.log(object2 === object1); //true, both has same Refernce
+
+    const object4 = {
+      message: 'Good Job!',
+      price: 799
+    };
+   
+    // const item = object4.message; another way of doing it is given below 
+   
+    // Destructuring
+    const {message,price} = object4; //'item' will store the values of object4
+    console.log(message); //Good Job!0
+    console.log(price); //799
+
+    // Short Hand Property
+    const object5 = {
+      // message: message
+      message
+    };
+    console.log(object5);
+
+    // Short hand method poperty
+    const object6 = {
+      
+      // method: function function1(){
+      //   console.log('method');
+      // }
+
+      method() {
+        console.log('method');
+      }
+    }
+    console.log(object6);
+  </script>
+</body>
+</html>

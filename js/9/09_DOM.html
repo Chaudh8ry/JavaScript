@@ -6,6 +6,25 @@
   <title>Document Object Model (DOM)</title>
 </head>
 <body>
-  
+  <button>hello</button>
+  <button class="js-button">Second Button</button>
+  <script>
+    /*
+    //The DOM combines HTML and JavaScript together
+    document.body.innerHTML = 'Hello';
+    document.title = 'Great Going';
+
+    // console.log(document.body);
+    document.body.innerHTML ='<button> Good Job! </button>';
+    */
+    
+    // document.querySelector() : Lets us get any element from the page and put it inside JavaScript
+    
+    console.log(document.querySelector('button')); //this will get the first button element
+    document.querySelector('button')
+      .innerHTML ='Changed';
+
+    document.querySelector('.js-button').innerHTML = 'Kardiya na change';
+  </script>
 </body>
 </html>

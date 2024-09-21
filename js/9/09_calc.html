@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aamzon Cart Calculator</title>
+</head>
+<body>
+  <p>Amazon Shipping Claculator</p>
+  <p>Order under $40 = +$10 Shipping</p>
+  <p>Order over $40 = FREE Shipping</p>
+
+  <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+    handleCostKeydown(event);
+  "> 
+  <button onclick="
+    calculateTotal();
+  ">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <script>
+    function handleCostKeydown(event){
+      if(event.key === 'Enter'){
+        calculateTotal();
+      }
+    }
+
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input'); //selects the input field where the user has entered the cost of their order.
+      let cost = Number(inputElement.value); // gets the value entered in the input field.
+    
+      if(cost <= 40){
+        cost += 10;
+      }
+
+      document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
+
+    }
+  </script>
+</body>
+
+<!--
+  Events and Event Listeners are key concepts in JavaScript that allow you to interact with the user and respond to various actions (like clicking a button, pressing a key, or hovering over an element).
+  Every eventlistener gets an event.
+
+1. Events:
+    Definition: An event is any action or occurrence that happens in the browser window that the JavaScript can respond to. Events can be triggered by user interactions (e.g., clicks, key presses) or other browser actions (e.g., page load, resizing).
+      Examples of Events:
+        ->click: When a user clicks on an element.
+        ->keydown: When a key is pressed.
+        ->mouseover: When a user hovers over an element.
+        ->load: When a webpage or resource finishes loading.
+
+2. Event Listeners:
+    Definition: An event listener is a function that listens for a specific event on a target element and then triggers a function (callback) when that event occurs. It's a way to "listen" to the occurrence of a specific event and respond accordingly.
+      Examples of Eventlisteners:
+        -> 'onclick' for click
+        -> 'onkeydown' for key press
+        -> 'onscroll' for scrolling
+        -> 'onmousenter' for hovering over
+        -> 'onmouseleave' for stop hovering over
+
+    How It Works: You can attach an event listener to an HTML element, and when a specific event occurs (like a click or a key press), the function you specify will run.
+-->
+</html>

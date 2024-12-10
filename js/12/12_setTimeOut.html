@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SetTimeOut</title>
+</head>
+<body>
+  <script>
+    /*
+        setTimeout(function, milliseconds, param1, param2, ...);
+        
+        -> function: The function to execute after the delay.
+        -> milliseconds: The time to wait before executing the function, in milliseconds (1 second = 1000 milliseconds).
+        -> param1, param2, …: Optional parameters to pass to the function (not supported in IE9 and earlier).
+    */
+    setTimeout(function(){
+      console.log('Delay');
+    },3000);
+
+    console.log('I am executing First'); //this will execute first bcz. setTimeout() is an Asynchronous code - It wont wait for a line to finish before going to next line
+    
+    // setInterval(function(){
+    //   console.log('interval');
+    // },3000);
+
+    console.log('next line 2');
+  </script>
+</body>
+</html>

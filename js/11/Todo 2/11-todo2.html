@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo - 2</title>
+  <link rel="stylesheet" href="./11-todo2.css">
+</head>
+<!--
+Algorithm:
+1. Create array to store todos
+2. When we click "Add"
+3. Get Text from textbox
+4. Add it to Array
+-->
+<body>
+  <p>Todo List Practice 1</p>
+  <div class="todo-input-grid">
+  <input type="text" placeholder="Todo Name" class="js-name-input name-input">
+  <input type="date" class="js-due-date-input due-date-input">
+  
+  <button onclick="
+    addTodo();
+  " class="add-todo-button">Add</button>
+  </div>
+
+  <div class="js-todo-list todo-grid"></div>
+  
+  <script src="./11-todo2.js"></script>
+</body>
+</html>

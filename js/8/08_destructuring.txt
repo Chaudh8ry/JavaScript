@@ -1,0 +1,47 @@
+'Object Destructuring' is a convenient way to extract values from objects and assign them to variables in a single statement.
+
+const person = {
+  name: 'Alice',
+  age: 25,
+  city: 'Wonderland'
+};
+
+const { name, age, city } = person;
+
+console.log(name); // Outputs: Alice
+console.log(age);  // Outputs: 25
+console.log(city); // Outputs: Wonderland
+--------------------------------------------------------------------------------------------------------
+
+Renaming Variables:
+You can also rename the variables while destructuring
+
+const person = {
+  name: 'Alice',
+  age: 25,
+  city: 'Wonderland'
+};
+
+const { name: personName, age: personAge, city: personCity } = person;
+
+console.log(personName); // Outputs: Alice
+console.log(personAge);  // Outputs: 25
+console.log(personCity); // Outputs: Wonderland
+
+--------------------------------------------------------------------------------------------------------
+
+Nested Destructuring
+Destructuring can also be used to extract values from nested objects
+
+const person = {
+  name: 'Alice',
+  address: {
+    city: 'Wonderland',
+    zip: '12345'
+  }
+};
+
+const { name, address: { city, zip } } = person;
+
+console.log(city); // Outputs: Wonderland
+console.log(zip);  // Outputs: 12345

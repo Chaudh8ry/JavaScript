@@ -1,0 +1,10 @@
+Autoboxing allows premitive DataType to behave like objects and use methods that are typically available only to objects.
+
+let text = "hello";
+console.log(text.toUpperCase()); // Outputs: "HELLO"
+
+Here, text is a primitive string. When you call toUpperCase(), JavaScript temporarily wraps the 'text' in a String object so that the method can be called. This temporary object is then discarded after the method call.
+
+Autoboxing makes it convenient to work with primitive values as if they were objects, providing access to useful methods without requiring explicit conversion.
+
+*Autoboxing doesnt work with 'NULL' and 'UNDEFINED', it can work on String,Number,Boolean

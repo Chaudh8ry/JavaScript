@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Reference and Destructuring</title>
+</head>
+<body>
+  <script>
+    //REFERENCE
+    /*
+    const arr1 = [1,2,3]; //arr1 contains the Reference to this value
+    const arr2 = arr1; //arr2 contains the copy of Reference
+
+    arr1.push(88);
+    console.log(arr1); // [1,2,3,88]
+    console.log(arr2); // [1,2,3,88]
+    */
+
+    // Slice : this method is used to create a shallow copy of a portion of an array into a new array object.
+    // array.slice(start, end);
+
+    const arr1 = [1,2,3,4,5];
+    const arr2 = arr1.splice(3); //[4,5]
+    console.log(arr2);
+
+    // DESTRUCTURING
+    const [firstValue, secondValue] = [1,2,3];
+  </script>
+</body>
+</html>

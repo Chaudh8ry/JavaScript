@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.splice()</title>
+</head>
+<body>
+  <script>
+  /*
+  //.splice() method in JavaScript is used to change the contents of an array by removing, replacing, or adding elements.
+    
+  ==> array.splice(start, deleteCount, item1, item2, ...)
+    
+    start: The index at which to start changing the array.
+    deleteCount: The number of elements to remove from the array.
+    item1, item2, ...: The elements to add to the array, starting from the start index. This parameter is optional
+  */
+
+
+  // Removing Element
+  let fruits1 = ["Apple", "Banana", "Cherry", "Date"];
+  fruits1.splice(1, 2); // Removes 2 elements starting from index 1
+  console.log(fruits1); // Output: ["Apple", "Date"]
+
+  // Adding Element
+  let fruits2 = ["Apple", "Banana", "Cherry"];
+  fruits2.splice(1, 0, "Blueberry", "Cranberry"); // Adds elements at index 1
+  console.log(fruits2); // Output: ["Apple", "Blueberry", "Cranberry", "Banana", "Cherry"]
+
+  // Replacing Elements
+  let fruits3 = ["Apple", "Banana", "Cherry"];
+  fruits3.splice(1, 1, "Blueberry"); // Replaces 1 element at index 1
+  console.log(fruits3); // Output: ["Apple", "Blueberry", "Cherry"]
+
+  </script>
+</body>
+</html>

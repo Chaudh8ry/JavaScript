@@ -25,8 +25,8 @@
     score.win = 0;
     score.loss = 0;
     score.tie = 0;
-    // localStorage.clear(); it removes everything from localStorage 
-    localStorage.removeItem('score'); // 'clear' removes the item associated with the specified key from local storage i.e. score will become 'NULL'
+    // localStorage.clear(); it removes all key-value pairs from localStorage, clearing out everything at once.
+    localStorage.removeItem('score'); // This method removes only the specified key-value pair from localStorage. You need to pass the key of the item you want to remove as an argument. This is useful when you want to delete specific data without affecting the rest of the stored items i.e. score will become 'NULL'
   ">Reset</button>
   
   <script>
@@ -42,7 +42,7 @@
       // saves computer move
       const computersChoice = pickComputerMove();
       
-      let result = '';
+      let result = ''; //we cant declare 'result' as 'const' bcz. here 1st we declared result as empty string and then we attempt to reassign it later based on random number generated
 
         if(userMove === 'Rock'){
           if(computersChoice === userMove){

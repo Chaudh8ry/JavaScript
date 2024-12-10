@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+<body>
+  <script>
+
+    const regularFunction = function(param1,param2){
+      console.log('Hello1');
+    };
+
+    //ARROW Funtion
+    const arrowFunction = (param1,param2) => {
+      console.log('Hello2');
+      return (param1+param2);
+    };
+    console.log(arrowFunction(2,5));
+
+    //Implicit Return: If the function body contains only a single expression, you can omit the curly braces and the return keyword
+    const add = (a,b) => a+b;
+    console.log(add(4,5));
+
+    //Implicit Return: If the function body contains only a single expression, you can omit the curly braces and the return keyword
+    const square = x => x * x;
+    console.log(square(4)); // Output: 16
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set-Interval and Set-Timeout Function</title>
+</head>
+<body>
+  <script>
+    // The 'setInterval' function in JavaScript returns a unique ID. This ID is an integer that you can use to reference the interval timer. You can then pass this ID to the clearInterval function to stop the interval.
+
+    // Start an interval that logs "Hello" every second
+    let intervalID = setInterval(function() {
+      console.log("Hello");
+    }, 1000);
+
+    // Stop the interval after 5 seconds
+    setTimeout(function() {
+      clearInterval(intervalID);
+      console.log("Interval stopped");
+    }, 5000);
+
+  </script>
+</body>
+</html>

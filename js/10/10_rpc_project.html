@@ -4,26 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors Using DOM</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+      font-family: Arial;
+    }
+
+    .title{
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .move-icon{
+      height: 50px;
+      background-color: transparent;
+    }
+
+    .move-button{
+      background-color: transparent;
+      border: 3px solid white;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .result{
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .rst-button{
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 20px;
+      border: none;
+    }
+  </style>
 </head>
 
 <body>
   <!-- User Select their Move -->
-  <p>Rock Paper Scissors: </p>
+  <p class="title">Rock Paper Scissors: </p>
   <button onclick="
-    playGame('Rock');
-  ">Rock</button>
+    playGame('rock');
+  " class="move-button"><img src="./rock-emoji.png" class="move-icon"></button>
   
   <button onclick="
-    playGame('Paper');
-  ">Paper</button>
+    playGame('paper');
+  " class="move-button"><img src="./paper-emoji.png" class="move-icon"></button>
   
   <button onclick="
-    playGame('Scissors');
-  ">Scissors</button>
+    playGame('scissors');
+  " class="move-button"><img src="./scissors-emoji.png" class="move-icon"></button>
   
-  <p class="js-result"></p>
-  <p class="js-moves"></p>
-  <p class="js-score"></p>
+  <p class="js-result result"></p>
+  <p class="js-moves result"></p>
+  <p class="js-score result"></p>
 
   <button onclick="
     score.win = 0;
@@ -31,7 +70,7 @@
     score.tie = 0;
     localStorage.removeItem('score');
     gameScore();
-  ">Reset</button>
+  " class="rst-button">Reset</button>
   
   <script>
     // Here we use 'Default Operator || ' 2nd condition is default condition it will run if score becomes 'NULL' due to the Reset button
@@ -51,32 +90,32 @@
       
       let result = '';
 
-        if(userMove === 'Rock'){
+        if(userMove === 'rock'){
           if(computersChoice === userMove){
             result = 'Tie';
-          } else if(computersChoice === 'Paper'){
+          } else if(computersChoice === 'paper'){
             result = 'You Loose';
-          } else if(computersChoice === 'Scissors'){
+          } else if(computersChoice === 'scissors'){
             result = 'You Won';
           }
         }
 
-        else if(userMove === 'Paper'){
+        else if(userMove === 'paper'){
           if(computersChoice === userMove){
             result = 'Tie';
-          } else if(computersChoice === 'Scissors'){
+          } else if(computersChoice === 'scissors'){
             result = 'You Loose';
-          } else if(computersChoice === 'Rock'){
+          } else if(computersChoice === 'rock'){
             result = 'You Won';
           }
         }
 
-        else if(userMove === 'Scissors'){
+        else if(userMove === 'scissors'){
           if(computersChoice === userMove){
             result = 'Tie';
-          } else if(computersChoice === 'Rock'){
+          } else if(computersChoice === 'rock'){
             result = 'You Loose';
-          } else if(computersChoice === 'Paper'){
+          } else if(computersChoice === 'paper'){
             result = 'You Won';
           }
         }
@@ -97,9 +136,11 @@
 
         document.querySelector('.js-result').innerText = result;
 
-        document.querySelector('.js-moves').innerText = `You ${userMove} - ${computersChoice} Computer`;
-
-
+        document.querySelector('.js-moves').innerHTML =
+        `You
+        <img src="./${userMove}-emoji.png" class="move-icon">
+        <img src="./${computersChoice}-emoji.png" class="move-icon">
+        Computer`;
        
         // Function for Computer Move
       function pickComputerMove(){
@@ -107,11 +148,11 @@
         let computerMove = '';
 
         if(randomNumber < 1/3){
-          computerMove = 'Rock';
+          computerMove = 'rock';
         } else if(randomNumber >= 1/3 && randomNumber < 2/3){
-          computerMove = 'Paper';
+          computerMove = 'paper';
         } else if(randomNumber >= 2/3 && randomNumber <= 1){
-          computerMove = 'Scissors';
+          computerMove = 'scissors';
         }
         return computerMove;
       }

@@ -11,8 +11,20 @@
       name: 'BasketBall',
       price: 2095
     };
+
+    //increase price by 500 cents
+    product.price += 500;
+    
+    // Using bracket notation to add new property
+    product['delivery-time'] = '3 Days';
+
+    // The delivery-time property is renamed to deliveryTime during destructuring to make it a valid identifier.
+    const {name,price,'delivery-time' : deliveryTime} = product;
+    
     // used Short hand property
-    console.log({name,price} = product);
+    console.log({name,price,deliveryTime});
+
+
   </script>
 </body>
 </html>

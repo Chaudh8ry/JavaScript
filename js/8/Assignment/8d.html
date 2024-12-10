@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparing Two Products</title>
+</head>
+<body>
+  <script>
+    let product1 = {
+     name: 'Shirt',
+     price: 1699 
+    };
+
+    let product2 = {
+      name: 'Pant',
+      price: 999
+    };
+
+    // returns a product that is less expensive
+    function compare(product1,product2){
+      if(product1.price < product2.price) console.log(product1); 
+      else console.log(product2);
+    }
+
+    //check if both products are same
+    function isSame(product1,product2){
+      if((product1.name === product2.name) && (product1.price === product2.price)) console.log("True");
+      else console.log("False");
+    }
+
+    compare(product1,product2);
+    isSame(product1,product2);
+  </script>
+</body>
+</html>

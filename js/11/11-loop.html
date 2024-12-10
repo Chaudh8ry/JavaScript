@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops in Array</title>
+</head>
+<body>
+
+  <script>
+    const nums = [1,2,3];
+    let total = 0;
+
+    //Sum of all Array Elements
+    for(let i =0; i<nums.length; i++){
+      const num = nums[i];
+      total += num;
+    }
+    console.log(total);
+
+    //Multiplying Array Elements by 2
+    let arr = [];
+    for(let i = 0; i<nums.length; i++){
+      let elmnt = nums[i];
+      arr.push(elmnt * 2);
+    }
+
+    console.log(arr);
+  </script>
+</body>
+</html>

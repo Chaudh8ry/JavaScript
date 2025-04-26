@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Button</title>
+  <style>
+    .style-button{
+      color: black;
+      background-color: rgb(230, 230, 230);
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-weight: 200;
+      font-size: medium;
+    }
+
+    .is-toggled{
+      color: white;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Button - 1 (Gaming) -->
+  <button class="js-button style-button" onclick="
+    const elmnt = document.querySelector('.js-button');
+
+    elmnt.classList.toggle('is-toggled');
+  ">Gaming</button>
+
+  <!-- Button - 2 (Music) -->
+  <button class="js-button-2 style-button" onclick="
+    elmnt = document.querySelector('.js-button-2');
+    if(elmnt.classList.contains('is-toggled')){
+      elmnt.classList.remove('is-toggled');
+    }else{
+      elmnt.classList.add('is-toggled');
+    }
+  ">Music</button>
+  
+  <!-- Button - 3 (Tech) -->
+  <button class="js-button-3 style-button" onclick="
+    elmnt = document.querySelector('.js-button-3');
+    if(elmnt.classList.contains('is-toggled')){
+      elmnt.classList.remove('is-toggled');
+    }else{
+      elmnt.classList.add('is-toggled');
+    }
+  ">Tech</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Button</title>
+  <style>
+    .style-button{
+      color: black;
+      background-color: rgb(230, 230, 230);
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-weight: 200;
+      font-size: medium;
+    }
+
+    .is-toggled{
+      color: white;
+      background-color: black;
+      /* border: none;
+      border-radius: 10px; */
+    }
+  </style>
+</head>
+<body>
+  <button class="js-button style-button" onclick="addClass()">Gaming</button>
+</body>
+  <script>
+    function addClass(){
+      let elmnt = document.querySelector('.js-button');
+
+      // "classList.toggle" adds the class if it's missing, and removes it if it exists.
+      elmnt.classList.toggle('is-toggled');
+    }
+  </script>
+</html>

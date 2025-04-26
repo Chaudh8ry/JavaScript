@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons</title>
+  <style>
+    .style-button{
+      color: black;
+      background-color: rgb(230, 230, 230);
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-weight: 200;
+      font-size: medium;
+    }
+
+    .is-toggled{
+      color: white;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <button class="butn1 style-button" onclick="toggleButton('butn1');">Music</button>
+  <button class="butn2 style-button" onclick="toggleButton('butn2');">Gaming</button>
+  <button class="butn3 style-button" onclick="toggleButton('butn3');">Tech</button>
+</body>
+  <script>
+    function toggleButton(activeClassButn){
+      //Selecting all the Buttons
+      const buttons = document.querySelectorAll('button');
+
+      //Loop through all the buttons and untoggle them 
+      buttons.forEach(button => {
+        if(button.classList.contains('is-toggled')){
+          button.classList.remove('is-toggled');
+        }
+      });
+
+      //Toggle only the clicked Button
+      const activeButn = document.querySelector(`.${activeClassButn}`);
+      activeButn.classList.add('is-toggled');
+    }
+  </script>
+</html>

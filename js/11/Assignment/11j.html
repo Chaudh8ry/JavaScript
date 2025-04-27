@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function to Add Number</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function addArray(arr1,arr2){
+
+    for(let i=0; i<arr1.length; i++){
+      arr1[i] += arr2[i];
+    }
+
+    for(let i=0; i<arr1.length; i++){
+      console.log(arr1[i]);
+    }  
+  }
+
+  console.log(addArray([1,2,3],[1,1,3]));
+</script>
+</html>
